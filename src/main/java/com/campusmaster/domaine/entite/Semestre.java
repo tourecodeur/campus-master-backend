@@ -17,7 +17,7 @@ public class Semestre {
     private Long id;
 
     @Column(nullable = false)
-    private String code; // ex: S1, S2
+    private String code;
 
     private String description;
 }

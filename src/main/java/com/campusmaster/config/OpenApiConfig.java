@@ -12,8 +12,8 @@ public class OpenApiConfig {
     public OpenAPI campusMasterOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("CampusMaster API")
-                        .description("API documentation for CampusMaster backend")
+                        .title("API CampusMaster")
+                        .description("Backend de la plateforme pédagogique CampusMaster (Master 2)")
                         .version("1.0.0"));
     }
 }

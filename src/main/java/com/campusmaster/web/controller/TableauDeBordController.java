@@ -6,9 +6,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-/**
- * Tableau de bord analytique : statistiques globales.
- */
 @RestController
 @RequestMapping("/api/tableau-de-bord")
 @CrossOrigin

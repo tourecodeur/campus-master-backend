@@ -36,7 +36,7 @@ public class ServiceTableauDeBordImpl implements ServiceTableauDeBord {
         }
         double tauxRemise = nbDevoirs == 0 ? 0.0 : (double) nbDepots / (double) nbDevoirs;
 
-        double performanceGlobale = 0.0; // Pour un vrai projet, moyenne des notes.
+        double performanceGlobale = 0.0;
 
         return StatistiquesTableauDeBordDto.builder()
                 .nombreEtudiantsActifs(nbEtudiantsActifs)

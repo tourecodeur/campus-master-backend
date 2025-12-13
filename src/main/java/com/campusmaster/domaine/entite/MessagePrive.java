@@ -29,7 +29,7 @@ public class MessagePrive {
     @Column(length = 4000)
     private String contenu;
 
-    private String tag; // #urgent, #annonce, #projet
+    private String tag;
 
     private LocalDateTime dateEnvoi = LocalDateTime.now();
 }

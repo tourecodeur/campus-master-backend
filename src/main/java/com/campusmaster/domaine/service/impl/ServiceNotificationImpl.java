@@ -30,10 +30,7 @@ public class ServiceNotificationImpl implements ServiceNotification {
 
     @Override
     public void notifierDevoirPublie(Long devoirId) {
-        Devoir devoir = devoirRepository.findById(devoirId)
-                .orElseThrow(() -> new IllegalArgumentException("Devoir introuvable"));
-        // Dans un vrai projet, notifier uniquement les étudiants inscrits au cours.
-        // Ici : rien, méthode laissée comme exemple.
+        // Hook à implémenter selon la logique métier (liste d'étudiants inscrits).
     }
 
     @Override
@@ -62,7 +59,7 @@ public class ServiceNotificationImpl implements ServiceNotification {
 
     @Override
     public void notifierDeadlineProche(Long devoirId) {
-        // À implémenter selon la logique métier (liste d'étudiants inscrits).
+        // À implémenter plus tard (notifications de deadline).
     }
 
     @Override

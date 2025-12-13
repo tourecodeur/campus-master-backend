@@ -8,9 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * API pour les notifications (consultation, marquage comme lues).
- */
 @RestController
 @RequestMapping("/api/notifications")
 @CrossOrigin

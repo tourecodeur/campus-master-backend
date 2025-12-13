@@ -48,7 +48,6 @@ public class ServiceMessageriePriveeImpl implements ServiceMessageriePrivee {
         List<MessagePrive> list = new ArrayList<>();
         list.addAll(messagePriveRepository.findByExpediteurAndDestinataireOrderByDateEnvoiAsc(u1, u2));
         list.addAll(messagePriveRepository.findByExpediteurAndDestinataireOrderByDateEnvoiAsc(u2, u1));
-        // Pour simplifier, pas de tri fusion ici.
         return list;
     }
 }

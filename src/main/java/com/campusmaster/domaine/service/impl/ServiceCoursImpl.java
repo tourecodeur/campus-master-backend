@@ -28,8 +28,6 @@ public class ServiceCoursImpl implements ServiceCours {
 
     @Override
     public List<Cours> listerCoursPourEtudiant(Long etudiantId) {
-        // Pour un vrai projet, lier les inscriptions aux cours.
-        // Ici on renvoie tous les cours pour simplifier.
         return coursRepository.findAll();
     }
 

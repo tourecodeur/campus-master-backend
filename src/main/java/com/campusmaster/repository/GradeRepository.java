@@ -1,7 +1,0 @@
-package com.campusmaster.repository;
-
-import com.campusmaster.entity.Grade;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface GradeRepository extends JpaRepository<Grade, Long> {
-}

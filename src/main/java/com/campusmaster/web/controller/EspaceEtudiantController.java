@@ -2,7 +2,9 @@ package com.campusmaster.web.controller;
 
 import com.campusmaster.domaine.entite.Cours;
 import com.campusmaster.domaine.entite.DepotDevoir;
-import com.campusmaster.domaine.service.*;
+import com.campusmaster.domaine.service.ServiceCours;
+import com.campusmaster.domaine.service.ServiceDepotDevoir;
+import com.campusmaster.domaine.service.ServiceNoteDevoir;
 import com.campusmaster.web.dto.CoursDto;
 import com.campusmaster.web.dto.NoteDevoirDto;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -12,9 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Espace étudiant : consultation des cours, dépôt de devoirs, notes, discussions.
- */
 @RestController
 @RequestMapping("/api/etudiants")
 @CrossOrigin

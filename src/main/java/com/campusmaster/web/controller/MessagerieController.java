@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Module de messagerie interne : privé et discussions de cours.
- */
 @RestController
 @RequestMapping("/api/messagerie")
 @CrossOrigin

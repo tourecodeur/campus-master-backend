@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Espace administrateur : gestion des utilisateurs, modules, matières, semestres.
- */
 @RestController
 @RequestMapping("/api/admin")
 @CrossOrigin

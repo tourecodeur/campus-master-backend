@@ -12,9 +12,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * Espace enseignant : gestion des cours, devoirs et correction.
- */
 @RestController
 @RequestMapping("/api/enseignants")
 @CrossOrigin
@@ -39,8 +36,8 @@ public class EspaceEnseignantController {
     }
 
     @GetMapping("/{enseignantId}/cours")
-    public ResponseEntity<List<Cours>> listerCours(@PathVariable Long enseignentId) {
-        return ResponseEntity.ok(serviceCours.listerCoursPourEnseignant(enseignentId));
+    public ResponseEntity<List<Cours>> listerCours(@PathVariable Long enseignantId) {
+        return ResponseEntity.ok(serviceCours.listerCoursPourEnseignant(enseignantId));
     }
 
     @PostMapping("/cours/{coursId}/devoirs")

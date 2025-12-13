@@ -18,7 +18,7 @@ public class Notification {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String typeEvenement; // DEVOIR_PUBLIE, DEVOIR_CORRIGE, NOUVEAU_MESSAGE, DEADLINE_PROCHE ...
+    private String typeEvenement;
 
     @Column(length = 1000)
     private String message;

@@ -2,9 +2,6 @@ package com.campusmaster.web.dto;
 
 import lombok.Data;
 
-/**
- * DTO simplifié pour la consultation de cours côté étudiant.
- */
 @Data
 public class CoursDto {
 

@@ -1,7 +1,6 @@
 package com.campusmaster.domaine.service;
 
 import com.campusmaster.domaine.entite.Cours;
-import com.campusmaster.domaine.entite.Utilisateur;
 
 import java.util.List;
 
