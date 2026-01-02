@@ -3,6 +3,8 @@ package com.campusmaster.domaine.entite;
 import com.campusmaster.domaine.enums.TypeSupport;
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
 
@@ -30,12 +32,24 @@ public class SupportCours {
     private String urlFichier;
 
     @Column(nullable = false)
+    @Builder.Default
     private int version = 1;
 
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime dateUpload = LocalDateTime.now();
 
     @ManyToOne
     @JoinColumn(name = "cours_id")
+    @JsonIgnore
     private Cours cours;
+
+    /**
+     * Expose l'ID du cours dans les réponses JSON sans sérialiser l'entité Cours
+     * (évite les boucles et permet au frontend de filtrer par cours).
+     */
+    @JsonProperty("coursId")
+    public Long getCoursId() {
+        return cours != null ? cours.getId() : null;
+    }
 }

@@ -23,8 +23,10 @@ public class Notification {
     @Column(length = 1000)
     private String message;
 
+    @Builder.Default
     private boolean lu = false;
 
+    @Builder.Default
     private LocalDateTime dateCreation = LocalDateTime.now();
 
     @ManyToOne

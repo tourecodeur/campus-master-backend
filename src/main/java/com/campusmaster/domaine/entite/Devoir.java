@@ -2,6 +2,7 @@ package com.campusmaster.domaine.entite;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -34,5 +35,7 @@ public class Devoir {
     private Cours cours;
 
     @OneToMany(mappedBy = "devoir", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    @JsonIgnore
     private Set<DepotDevoir> depots = new HashSet<>();
 }

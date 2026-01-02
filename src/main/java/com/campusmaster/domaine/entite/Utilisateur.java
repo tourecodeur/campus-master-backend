@@ -3,6 +3,7 @@ package com.campusmaster.domaine.entite;
 import com.campusmaster.domaine.enums.TypeRole;
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDateTime;
 
@@ -23,6 +24,7 @@ public class Utilisateur {
     private String email;
 
     @Column(nullable = false)
+    @JsonIgnore
     private String motDePasse;
 
     @Column(nullable = false)
@@ -33,8 +35,19 @@ public class Utilisateur {
     private TypeRole role;
 
     @Column(nullable = false)
+    @Builder.Default
     private boolean actif = true;
 
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime dateInscription = LocalDateTime.now();
+
+
+@PrePersist
+public void prePersist() {
+    if (dateInscription == null) {
+        dateInscription = LocalDateTime.now();
+    }
+}
+
 }
