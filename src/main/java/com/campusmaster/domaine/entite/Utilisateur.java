@@ -42,12 +42,11 @@ public class Utilisateur {
     @Builder.Default
     private LocalDateTime dateInscription = LocalDateTime.now();
 
-
-@PrePersist
-public void prePersist() {
-    if (dateInscription == null) {
-        dateInscription = LocalDateTime.now();
+    @PrePersist
+    public void prePersist() {
+        if (dateInscription == null) {
+            dateInscription = LocalDateTime.now();
+        }
     }
-}
 
 }
