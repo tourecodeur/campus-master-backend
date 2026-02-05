@@ -31,5 +31,6 @@ public class MessagePrive {
 
     private String tag;
 
+    @Builder.Default
     private LocalDateTime dateEnvoi = LocalDateTime.now();
 }

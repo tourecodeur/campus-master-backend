@@ -2,6 +2,7 @@ package com.campusmaster.domaine.entite;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDateTime;
 
@@ -21,6 +22,7 @@ public class MessageDiscussion {
     @Column(length = 4000)
     private String contenu;
 
+    @Builder.Default
     private LocalDateTime dateEnvoi = LocalDateTime.now();
 
     @ManyToOne
@@ -29,5 +31,6 @@ public class MessageDiscussion {
 
     @ManyToOne
     @JoinColumn(name = "discussion_id")
+    @JsonIgnore
     private Discussion discussion;
 }

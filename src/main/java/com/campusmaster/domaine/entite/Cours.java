@@ -2,6 +2,7 @@ package com.campusmaster.domaine.entite;
 
 import jakarta.persistence.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -39,8 +40,11 @@ public class Cours {
     private Utilisateur enseignant;
 
     @Column(nullable = false)
+    @Builder.Default
     private LocalDateTime dateCreation = LocalDateTime.now();
 
+    @JsonIgnore
     @OneToMany(mappedBy = "cours", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
     private Set<SupportCours> supports = new HashSet<>();
 }
